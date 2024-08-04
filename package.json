@@ -1,0 +1,8 @@
+{
+  "name": "modsen-doggy-spa",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/UladzislauPapliouka/ModsenDoggySPA.git",
+  "author": "Uladzislau Papliouka",
+  "license": "MIT"
+}
