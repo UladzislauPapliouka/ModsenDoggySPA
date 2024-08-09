@@ -7,5 +7,5 @@ export default [
   ...tsConfig.configs.recommended,
   reactEslintPlugin.configs.flat.recommended,
   prettier,
-  { ignores: ['node_modules/*', '.next/*'] },
+  { ignores: ['node_modules/', '.next', 'commitlint.config.js'] },
 ];
