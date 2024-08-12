@@ -22,7 +22,9 @@
     "lint": "eslint .",
     "format": "prettier . --write",
     "prepare": "husky",
-    "test:jest": "jest ."
+    "test:jest": "jest .",
+    "test:cypress:open": "cypress open",
+    "test:cypress:ci": "cypress"
   },
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
@@ -41,6 +43,7 @@
     "@types/jest": "^29.5.12",
     "@types/node": "22.1.0",
     "@types/react": "18.3.3",
+    "cypress": "^13.13.2",
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
