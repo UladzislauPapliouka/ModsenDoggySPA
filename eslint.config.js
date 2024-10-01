@@ -5,7 +5,7 @@ import reactEslintPlugin from 'eslint-plugin-react';
 export default [
   js.configs.recommended,
   ...tsConfig.configs.recommended,
-  reactEslintPlugin.configs.flat.recommended,
+  reactEslintPlugin.configs.flat['jsx-runtime'],
   prettier,
   {
     ignores: [
