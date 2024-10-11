@@ -1,0 +1,45 @@
+@import 'styles/variables';
+.footer {
+  box-sizing: border-box;
+  background-color: $in-house-color;
+  border-top: 12px solid $rosey-cheek;
+
+  .primary {
+    padding: 55px 0;
+    display: grid;
+    grid-template-areas:
+      'service  subscribe subscribe subscribe navigation'
+      'service social social social navigation';
+    .service {
+      grid-area: service;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .subscribe {
+      grid-area: subscribe;
+    }
+    .social {
+      grid-area: social;
+    }
+    .navigation {
+      grid-area: navigation;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: fit-content;
+    }
+  }
+  .secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $rosey-cheek;
+    padding: 13px 95px;
+    gap: 13px;
+    & > span:nth-child(3) {
+      flex-grow: 2;
+      text-align: center;
+    }
+  }
+}
