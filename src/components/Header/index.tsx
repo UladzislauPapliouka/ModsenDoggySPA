@@ -7,7 +7,7 @@ export const Header = () => {
   return (
     <header className={style.header}>
       {routes.map(({ link, text }) => (
-        <NavLink href={link} active={currentPath === link}>
+        <NavLink key={link} href={link} active={currentPath === link}>
           {text}
         </NavLink>
       ))}

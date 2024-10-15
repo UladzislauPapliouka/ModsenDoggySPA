@@ -10,6 +10,7 @@
     grid-template-areas:
       'service  subscribe subscribe subscribe navigation'
       'service social social social navigation';
+    grid-column-gap: 100px;
     .service {
       grid-area: service;
       display: flex;
@@ -17,17 +18,59 @@
       gap: 14px;
     }
     .subscribe {
+      justify-self: center;
+      > span {
+        font-size: 32px;
+        font-weight: 700;
+      }
       grid-area: subscribe;
+      > div {
+        display: flex;
+        gap: 30px;
+        > input {
+          border: 1px solid #e0e0e0;
+          border-radius: 8px;
+          padding: 20px 24px;
+          font-size: 14px;
+          font-weight: 400;
+          font-family: 'Cormorant', serif;
+        }
+        > button {
+          background: $pink-kisses;
+          border: none;
+          height: fit-content;
+          padding: 10px 35px;
+          color: #fff;
+          font-family: 'Cormorant', serif;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 21px;
+          border-radius: 200px;
+        }
+      }
     }
     .social {
       grid-area: social;
+      justify-self: center;
+      > span {
+        font-size: 32px;
+        font-weight: 700;
+      }
+      > div {
+        display: flex;
+        gap: 56px;
+        padding-left: 28px;
+      }
     }
     .navigation {
       grid-area: navigation;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      width: fit-content;
+      justify-self: end;
+      > div {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        width: fit-content;
+      }
     }
   }
   .secondary {

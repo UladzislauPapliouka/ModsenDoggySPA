@@ -1,4 +1,34 @@
 import style from './index.module.scss';
+import instagram from '../../../public/instagram.svg';
+import facebook from '../../../public/facebook.svg';
+import pinterest from '../../../public/pinterest.svg';
+import twitter from '../../../public/twitter.svg';
+import snapchat from '../../../public/snapchat.svg';
+import Image from 'next/image';
+
+const social = {
+  instagram: {
+    image: instagram,
+    link: '',
+  },
+  facebook: {
+    image: facebook,
+    link: '',
+  },
+  pinterest: {
+    image: pinterest,
+    link: '',
+  },
+  twitter: {
+    image: twitter,
+    link: '',
+  },
+  snapchat: {
+    image: snapchat,
+    link: '',
+  },
+};
+
 export const Footer = () => {
   return (
     <footer className={style.footer}>
@@ -13,24 +43,28 @@ export const Footer = () => {
         </div>
         <div className={style.subscribe}>
           <span>Subscribe to our Newsletter</span>
-          <input type="text" />
-          <button>Submit</button>
+          <div>
+            <input placeholder={'Email'} type="text" />
+            <button>Submit</button>
+          </div>
         </div>
         <div className={style.social}>
           <span>Connect With Us On Social Media</span>
-          <img src="a" alt="inst" />
-          <img src="a" alt="facebook" />
-          <img src="a" alt="pintrest" />
-          <img src="a" alt="twitter" />
-          <img src="a" alt="span" />
+          <div>
+            {Object.values(social).map(({ image }) => (
+              <Image src={image as string} alt={'test'} />
+            ))}
+          </div>
         </div>
         <div className={style.navigation}>
-          <h2>Navigation</h2>
-          <span>Home</span>
-          <span>About Us</span>
-          <span>Contact Us</span>
-          <span>FAQs</span>
-          <span>Help with navigation</span>
+          <div>
+            <h2>Navigation</h2>
+            <span>Home</span>
+            <span>About Us</span>
+            <span>Contact Us</span>
+            <span>FAQs</span>
+            <span>Help with navigation</span>
+          </div>
         </div>
       </div>
       <div className={style.secondary}>
