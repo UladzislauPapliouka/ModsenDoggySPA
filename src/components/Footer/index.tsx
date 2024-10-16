@@ -47,13 +47,13 @@ export const Footer = () => {
             <input placeholder={'Email'} type="text" />
             <button>Submit</button>
           </div>
-        </div>
-        <div className={style.social}>
-          <span>Connect With Us On Social Media</span>
-          <div>
-            {Object.values(social).map(({ image }) => (
-              <Image src={image as string} alt={'test'} />
-            ))}
+          <div className={style.social}>
+            <span>Connect With Us On Social Media</span>
+            <div>
+              {Object.values(social).map(({ image }) => (
+                <Image src={image as string} alt={'test'} />
+              ))}
+            </div>
           </div>
         </div>
         <div className={style.navigation}>

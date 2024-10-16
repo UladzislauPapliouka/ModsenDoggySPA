@@ -13,6 +13,11 @@ const App: FC<AppProps> = ({ Component }) => {
           html {
             font-family: ${cormorant.style.fontFamily};
           }
+          * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+          }
         `}
       </style>
       <Layout>

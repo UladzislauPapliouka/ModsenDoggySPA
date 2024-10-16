@@ -5,17 +5,24 @@
   border-top: 12px solid $rosey-cheek;
 
   .primary {
-    padding: 55px 0;
+    padding: 55px 25px;
     display: grid;
     grid-template-areas:
       'service  subscribe subscribe subscribe navigation'
-      'service social social social navigation';
+      'service subscribe subscribe subscribe navigation';
     grid-column-gap: 100px;
     .service {
       grid-area: service;
       display: flex;
       flex-direction: column;
       gap: 14px;
+      > h2 {
+        font-size: 32px;
+        margin-bottom: 16px;
+      }
+      > span {
+        font-size: 26px;
+      }
     }
     .subscribe {
       justify-self: center;
@@ -25,12 +32,16 @@
       }
       grid-area: subscribe;
       > div {
+        margin-top: 34px;
+
         display: flex;
         gap: 30px;
         > input {
+          box-sizing: border-box;
           border: 1px solid #e0e0e0;
           border-radius: 8px;
           padding: 20px 24px;
+          width: 500px;
           font-size: 14px;
           font-weight: 400;
           font-family: 'Cormorant', serif;
@@ -48,20 +59,24 @@
           border-radius: 200px;
         }
       }
-    }
-    .social {
-      grid-area: social;
-      justify-self: center;
-      > span {
-        font-size: 32px;
-        font-weight: 700;
-      }
-      > div {
+      .social {
+        margin-top: 72px;
+        //margin-bottom: 84px;
         display: flex;
-        gap: 56px;
-        padding-left: 28px;
+        flex-direction: column;
+        gap: 34px;
+        > span {
+          font-size: 32px;
+          font-weight: 700;
+        }
+        > div {
+          display: flex;
+          gap: 56px;
+          padding-left: 28px;
+        }
       }
     }
+
     .navigation {
       grid-area: navigation;
       justify-self: end;
@@ -70,6 +85,13 @@
         flex-direction: column;
         gap: 14px;
         width: fit-content;
+        > h2 {
+          font-size: 32px;
+          margin-bottom: 16px;
+        }
+        > span {
+          font-size: 26px;
+        }
       }
     }
   }
@@ -80,6 +102,7 @@
     background-color: $rosey-cheek;
     padding: 13px 95px;
     gap: 13px;
+    font-size: 22px;
     & > span:nth-child(3) {
       flex-grow: 2;
       text-align: center;
