@@ -15,4 +15,7 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - run: |
+          yarn install
+          yarn test:jest
       - run: echo "🍏 This job's status is ${{ job.status }}."
