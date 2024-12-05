@@ -5,7 +5,7 @@ type Route = {
 export const routes: Route[] = [
   {
     text: 'Home',
-    link: '/home',
+    link: '/',
   },
   {
     text: 'Info',

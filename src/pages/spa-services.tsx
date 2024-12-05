@@ -1,13 +1,16 @@
-import { Button } from '@components/button';
-import { useState } from 'react';
+import { SpaService } from '@components/SpaService';
+import styles from './spa-service.module.scss';
+import { spaServices } from '../shared/spa-services';
+
 export default function IndexPage() {
-  const [state, setState] = useState(1);
   return (
-    <div>
-      <div>Spa</div>
-      <p>{state}</p>
-      <button onClick={() => setState(s => s + 1)}>Increase</button>
-      <Button />
+    <div className={styles.container}>
+      <span className={styles.title}>Spa Service</span>
+      <hr />
+      {spaServices.map(service => (
+        <SpaService {...service} />
+      ))}
+      <hr />
     </div>
   );
 }
