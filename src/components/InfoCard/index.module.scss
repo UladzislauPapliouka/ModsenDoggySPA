@@ -1,0 +1,23 @@
+@import 'src/styles/variables';
+.infoCard {
+  display: flex;
+  justify-content: space-between;
+  gap: 150px;
+  align-items: center;
+  img {
+    width: clamp(200px, 100%, 500px);
+    height: clamp(200px, 100%, 500px);
+    aspect-ratio: 1;
+    border: 14px solid $rosey-cheek;
+  }
+
+  span {
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    width: 50%;
+  }
+}
+.reversed {
+  flex-direction: row-reverse;
+}

@@ -1,4 +1,4 @@
-import style from 'index.module.scss';
+import style from './index.module.scss';
 import instagram from '../../../public/instagram.svg';
 import facebook from '../../../public/facebook.svg';
 import pinterest from '../../../public/pinterest.svg';

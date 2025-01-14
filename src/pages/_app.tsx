@@ -1,9 +1,6 @@
-import { Layout } from '@components/Layout';
+import { cormorant, Layout } from '@components/Layout';
 import { AppProps } from 'next/app';
 import { FC } from 'react';
-import { Cormorant } from 'next/font/google';
-
-const cormorant = Cormorant({ subsets: ['cyrillic', 'latin'] });
 
 const App: FC<AppProps> = ({ Component }) => {
   return (
