@@ -1,14 +1,13 @@
 import { InfoCard } from '@components/InfoCard';
 import styles from './about-us.module.scss';
+import { PageTitle } from '@components/PageTitle';
 export default function AboutUsPage() {
   return (
     <div className={styles.container}>
-      <div className={styles.titleContainer}>
-        <span className={styles.title}>About Us</span>
-        <span className={styles.subTitle}>
-          Our Owners Love Dogs and Cats Only
-        </span>
-      </div>
+      <PageTitle
+        title={'About Us'}
+        subtitle={' Our Owners Love Dogs and Cats Only'}
+      />
 
       <>
         <InfoCard
