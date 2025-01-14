@@ -5,3 +5,4 @@ build
 yarn.lock
 *storybook.log
 .idea/
+package-lock.json
