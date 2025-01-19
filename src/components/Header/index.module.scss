@@ -1,94 +1,88 @@
+@import 'src/styles/variables';
 .header {
   display: flex;
   align-items: center;
+  padding: 0 10px;
+  transition: opacity 0.3s;
   .links {
-    width: 100%;
+    flex-grow: 1;
     height: 78px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 70px;
+  }
+  .burger {
+    display: none;
     position: relative;
-    @media screen and (max-width: 700px) {
-      flex-wrap: wrap;
-      display: none;
-      > a {
-        flex-basis: 100%;
-      }
-    }
-  }
-}
-
-.burger {
-  cursor: pointer;
-  margin: 20px;
-  display: none;
-  position: relative;
-  z-index: 3;
-  align-items: center;
-  justify-content: flex-end;
-  width: 30px;
-  height: 18px;
-  > span {
-    width: 80%;
-    height: 2px;
-    transform: scale(1);
-    background-color: black;
-  }
-  &:before,
-  &:after {
-    position: absolute;
-    content: '';
-    background-color: black;
-    width: 100%;
-    height: 2px;
-    transition: all 0.4s ease 0s;
-  }
-  &:before {
-    top: 0;
-  }
-  &:after {
-    bottom: 0;
-  }
-
-  &.active {
+    z-index: 3;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30px;
+    height: 18px;
     > span {
-      transform: scale(0);
+      width: 90%;
+      height: 2px;
+      transform: scale(1);
+      background-color: black;
+    }
+    &:before,
+    &:after {
+      position: absolute;
+      content: '';
+      background-color: black;
+      width: 100%;
+      height: 2px;
+      transition: all 0.4s ease 0s;
     }
     &:before {
-      top: 50%;
-      transform: rotate(-45deg) translateY(-50%);
+      top: 0;
     }
     &:after {
-      top: 50%;
-      transform: rotate(45deg) translateY(50%);
+      bottom: 0;
     }
   }
-}
-
-@media screen and (max-width: 700px) {
-  .burger {
-    display: flex;
-    align-self: flex-start;
-  }
-  .header.active {
+  &.active {
     z-index: 3;
     overflow-y: auto;
     background: #333333;
     position: fixed;
     height: 100dvh !important;
-    animation: appear 0.4s;
+    animation: appear 0.3s;
+    display: grid;
+    grid-template-areas:
+      'logo logo logo burger'
+      'links links links links';
+    align-content: stretch;
+    grid-template-rows: 80px 1fr;
+    .logo {
+      grid-area: logo;
+    }
     .burger {
-      background: #333333;
-      color: white;
+      grid-area: burger;
+      justify-self: center;
+      align-self: center;
+      > span {
+        transform: scale(0);
+      }
       &:before,
       &:after {
-        color: white;
+        background-color: white !important;
+      }
+      &:before {
+        top: 50%;
+        transform: rotate(-45deg) translateY(-50%);
+      }
+      &:after {
+        background: red;
+        top: 50%;
+        transform: rotate(45deg) translateY(50%);
       }
     }
     .links {
+      grid-area: links;
       display: flex;
-      gap: 0 !important;
+      gap: 10px !important;
       padding: 20px 10px;
       align-items: flex-start !important;
       background: #333333;
@@ -98,7 +92,27 @@
       }
     }
   }
+  @media screen and (max-width: $mobile-width) {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    background: white;
+    justify-content: space-between;
+    .links {
+      flex-wrap: wrap;
+      display: none;
+      > a {
+        flex-basis: 100%;
+      }
+    }
+    .burger {
+      display: flex;
+      align-self: center;
+    }
+  }
 }
+
 @keyframes appear {
   from {
     opacity: 0;
