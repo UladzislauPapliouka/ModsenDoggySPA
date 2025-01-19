@@ -1,8 +1,6 @@
+@import 'src/styles/common';
 .container {
-  padding: 96px 284px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @extend .common-container;
 
   > .title {
     font-weight: 700;

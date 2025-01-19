@@ -1,4 +1,5 @@
 @import 'src/styles/variables';
+@import 'src/styles/common';
 .image {
   position: relative;
   height: fit-content;
@@ -14,7 +15,7 @@
   div {
     width: 100%;
     position: absolute;
-    padding: 96px 284px;
+    @extend .common-container;
     span {
       display: block;
       max-width: 478px;
@@ -25,8 +26,8 @@
   }
 }
 .main {
-  padding: 71px 284px;
-  span:first-child {
+  @extend .common-container;
+  > span:first-child {
     font-size: 40px;
     display: block;
     font-weight: 700;
@@ -42,6 +43,27 @@
     'email phoneNumber'
     'message message'
     'card card';
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    grid-template-areas:
+      'firstName'
+      'lastName'
+      'email'
+      'phoneNumber'
+      'message'
+      'card ';
+    .card {
+      width: 100% !important;
+      grid-template-areas:
+        'title'
+        'cardNumber'
+        'expiryDate'
+        'ccv'
+        'nameOnCard'
+        'paymentInfo'
+        'submit' !important;
+    }
+  }
   grid-column-gap: 24px;
   grid-row-gap: 40px;
   .card {

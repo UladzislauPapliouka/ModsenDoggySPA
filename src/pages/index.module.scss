@@ -1,4 +1,5 @@
 @import 'src/styles/variables';
+@import 'src/styles/common';
 .image {
   position: relative;
   height: fit-content;
@@ -15,12 +16,9 @@
     width: fit-content;
     height: 100%;
     position: absolute;
-    display: flex;
     justify-content: flex-end;
-    align-items: center;
-    flex-direction: column;
     gap: 48px;
-    padding: 96px 284px;
+    @extend .common-container;
     span {
       text-align: center;
       display: block;
@@ -28,6 +26,9 @@
       color: $char-coal;
       font-size: 70px;
       font-weight: 700;
+      @media screen and (max-width: 700px) {
+        color: white;
+      }
     }
     button {
       background: $pink-kisses;
@@ -45,18 +46,21 @@
 }
 
 .catalogSection {
-  padding: 0 284px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @extend .common-container;
   gap: 64px;
   margin-top: 81px;
   .view {
     align-self: stretch;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    //display: grid;
+    //grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 103px;
     & > div {
+      flex: 1 1 calc(100% / 3 - 103px / 2 * 3);
+      @media screen and (max-width: 700px) {
+        flex-basis: 100%;
+      }
       display: flex;
       flex-direction: column;
       gap: 23px;

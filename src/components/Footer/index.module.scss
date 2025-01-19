@@ -3,6 +3,8 @@
   box-sizing: border-box;
   background-color: $in-house-color;
   border-top: 12px solid $rosey-cheek;
+  display: flex;
+  flex-direction: column;
 
   .primary {
     padding: 55px 25px;
@@ -71,12 +73,11 @@
         }
         > div {
           display: flex;
-          gap: 56px;
+          gap: 10px 56px;
           padding-left: 28px;
         }
       }
     }
-
     .navigation {
       grid-area: navigation;
       justify-self: end;
@@ -94,6 +95,32 @@
         }
       }
     }
+
+    @media screen and (max-width: 700px) {
+      flex-wrap: wrap;
+      grid-template-areas:
+        'service'
+        'navigation'
+        'subscribe';
+      .navigation {
+        justify-self: stretch;
+      }
+      .subscribe {
+        > div {
+          flex-direction: column;
+          input {
+            width: 100%;
+          }
+        }
+      }
+      .social {
+        > div {
+          flex-wrap: wrap;
+          gap: 10px 40px !important;
+          padding-left: 0 !important;
+        }
+      }
+    }
   }
   .secondary {
     display: flex;
@@ -106,6 +133,14 @@
     & > span:nth-child(3) {
       flex-grow: 2;
       text-align: center;
+    }
+    @media screen and (max-width: 700px) {
+      flex-wrap: wrap;
+      padding: 13px 25px;
+      & > span {
+        flex: 0 1 100%;
+        text-align: left !important;
+      }
     }
   }
 }

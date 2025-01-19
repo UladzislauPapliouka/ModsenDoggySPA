@@ -1,7 +1,5 @@
+@import 'src/styles/common';
 .container {
-  padding: 80px 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @extend .common-container;
   gap: 128px;
 }
