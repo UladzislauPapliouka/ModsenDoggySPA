@@ -43,7 +43,7 @@ export const Footer = () => {
         </div>
         <div className={style.subscribe}>
           <span>Subscribe to our Newsletter</span>
-          <div>
+          <div className={style.subscribeForm}>
             <input placeholder={'Email'} type="text" />
             <button>Submit</button>
           </div>

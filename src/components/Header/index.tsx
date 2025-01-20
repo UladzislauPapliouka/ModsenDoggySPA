@@ -33,20 +33,6 @@ export const Header = () => {
       currentScrollDistance.current = Math.abs(
         scrolledFromTop.current - window.scrollY
       );
-      // console.log('scrollDirection down', scrollDirection.current === 'down');
-      // console.log(
-      //   'currentScrollDistance > 100',
-      //   currentScrollDistance.current > 100
-      // );
-      // console.log('window.innerWidth < 748', window.innerWidth < 748);
-      // console.log(
-      //   " !blockRef!.current!.getAttribute('data-is-open')",
-      //   blockRef!.current!.getAttribute('data-is-open')
-      // );
-      // console.log(
-      //   " blockRef!.current!.getAttribute('data-is-open')",
-      //   blockRef!.current!.getAttribute('data-is-open')
-      // );
       if (
         scrollDirection.current === 'down' &&
         currentScrollDistance.current > 100 &&

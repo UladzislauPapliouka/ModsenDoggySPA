@@ -5,7 +5,6 @@
   border-top: 12px solid $rosey-cheek;
   display: flex;
   flex-direction: column;
-
   .primary {
     padding: 55px 25px;
     display: grid;
@@ -17,27 +16,27 @@
       grid-area: service;
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      row-gap: 14px;
+      font-size: 26px;
       > h2 {
         font-size: 32px;
         margin-bottom: 16px;
       }
-      > span {
-        font-size: 26px;
-      }
     }
     .subscribe {
       justify-self: center;
+      grid-area: subscribe;
+      display: flex;
+      flex-direction: column;
+      row-gap: 34px;
       > span {
         font-size: 32px;
         font-weight: 700;
       }
-      grid-area: subscribe;
-      > div {
-        margin-top: 34px;
-
+      > .subscribeForm {
         display: flex;
-        gap: 30px;
+        column-gap: 30px;
+        align-items: center;
         > input {
           box-sizing: border-box;
           border: 1px solid #e0e0e0;
@@ -62,15 +61,15 @@
         }
       }
       .social {
-        margin-top: 72px;
-        //margin-bottom: 84px;
         display: flex;
         flex-direction: column;
         gap: 34px;
+
         > span {
           font-size: 32px;
           font-weight: 700;
         }
+
         > div {
           display: flex;
           gap: 10px 56px;
@@ -86,38 +85,10 @@
         flex-direction: column;
         gap: 14px;
         width: fit-content;
+        font-size: 26px;
         > h2 {
           font-size: 32px;
           margin-bottom: 16px;
-        }
-        > span {
-          font-size: 26px;
-        }
-      }
-    }
-
-    @media screen and (max-width: 700px) {
-      flex-wrap: wrap;
-      grid-template-areas:
-        'service'
-        'navigation'
-        'subscribe';
-      .navigation {
-        justify-self: stretch;
-      }
-      .subscribe {
-        > div {
-          flex-direction: column;
-          input {
-            width: 100%;
-          }
-        }
-      }
-      .social {
-        > div {
-          flex-wrap: wrap;
-          gap: 10px 40px !important;
-          padding-left: 0 !important;
         }
       }
     }
@@ -134,12 +105,48 @@
       flex-grow: 2;
       text-align: center;
     }
-    @media screen and (max-width: 700px) {
+  }
+  @media screen and (max-width: $mobile-width) {
+    .primary {
+      grid-template-areas:
+        'service'
+        'navigation'
+        'subscribe';
+      .navigation {
+        justify-self: stretch;
+      }
+      .subscribe {
+        width: 100%;
+        > .subscribeForm {
+          flex-direction: column;
+          row-gap: 14px;
+          align-items: stretch;
+          input {
+            width: 100%;
+          }
+        }
+        .social {
+          > div {
+            flex-wrap: wrap;
+            gap: 10px 40px;
+            padding-left: 0;
+            > img {
+              flex: 1;
+              object-position: left;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+    }
+    .secondary {
       flex-wrap: wrap;
       padding: 13px 25px;
-      & > span {
+      > span {
         flex: 0 1 100%;
-        text-align: left !important;
+        &:nth-child(3) {
+          text-align: left;
+        }
       }
     }
   }
