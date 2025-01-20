@@ -26,12 +26,21 @@
   }
 }
 .main {
-  @extend .common-container;
+  padding: 70px;
   > span:first-child {
     font-size: 40px;
     display: block;
     font-weight: 700;
     margin-bottom: 70px;
+  }
+  > div {
+    display: flex;
+    width: 100%;
+  }
+}
+@media screen and (max-width: $mobile-width) {
+  .main {
+    padding: 16px 12px;
   }
 }
 
