@@ -1,5 +1,5 @@
 import { InfoCard } from '@components/InfoCard';
-import styles from './about-us.module.scss';
+import styles from './index.module.scss';
 import { PageTitle } from '@components/PageTitle';
 export default function AboutUsPage() {
   return (

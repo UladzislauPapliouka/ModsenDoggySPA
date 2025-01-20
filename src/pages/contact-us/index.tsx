@@ -1,4 +1,4 @@
-import styles from './contact-us.module.scss';
+import styles from './index.module.scss';
 import { PageTitle } from '@components/PageTitle';
 import { useForm } from 'react-hook-form';
 import { object, ObjectSchema, string as yupString } from 'yup';

@@ -1,4 +1,4 @@
-import styles from './book-appointment.module.scss';
+import styles from './index.module.scss';
 import {
   object,
   ObjectSchema,

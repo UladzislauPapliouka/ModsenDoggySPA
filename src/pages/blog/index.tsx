@@ -1,5 +1,5 @@
 import { PageTitle } from '@components/PageTitle';
-import styles from './blog.module.scss';
+import styles from './index.module.scss';
 import { InfoCard } from '@components/InfoCard';
 export default function IndexPage() {
   return (

@@ -1,5 +1,5 @@
 import { PageTitle } from '@components/PageTitle';
-import styles from './info.module.scss';
+import styles from './index.module.scss';
 import { CiSearch } from 'react-icons/ci';
 
 export default function IndexPage() {

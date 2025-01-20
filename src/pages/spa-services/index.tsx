@@ -1,6 +1,6 @@
 import { SpaService } from '@components/SpaService';
-import styles from './spa-service.module.scss';
-import { spaServices } from '../shared/spa-services';
+import styles from './index.module.scss';
+import { spaServices } from '../../shared/spa-services';
 
 export default function IndexPage() {
   return (
