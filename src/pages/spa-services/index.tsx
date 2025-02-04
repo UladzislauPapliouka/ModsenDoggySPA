@@ -1,11 +1,14 @@
 import { SpaService } from '@components/SpaService';
 import styles from './index.module.scss';
 import { spaServices } from '../../shared/spa-services';
+import { Typography } from '@components/Typography';
 
 export default function IndexPage() {
   return (
     <div className={styles.container}>
-      <span className={styles.title}>Spa Service</span>
+      <Typography weight={'bold'} variant={'header-1'}>
+        Spa Service
+      </Typography>
       <hr />
       {spaServices.map(service => (
         <SpaService {...service} />

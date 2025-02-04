@@ -1,4 +1,5 @@
 import styles from './index.module.scss';
+import { Typography } from '@components/Typography';
 
 type Props = {
   title: string;
@@ -8,9 +9,13 @@ type Props = {
 export const SpaService = ({ title, description, price }: Props) => {
   return (
     <div className={styles.container}>
-      <span className={styles.title}>{title}</span>
-      <span className={styles.price}>{`$${price}`}</span>
-      <span className={styles.description}>{description}</span>
+      <Typography variant={'header-3'} weight={'bold'}>
+        {title}
+      </Typography>
+      <Typography
+        variant={'header-3'}
+        weight={'bold'}>{`$${price}`}</Typography>
+      <Typography variant={'body-2'}>{description}</Typography>
     </div>
   );
 };

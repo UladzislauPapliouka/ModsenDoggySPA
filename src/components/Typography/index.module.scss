@@ -1,0 +1,33 @@
+.component {
+  font-family: var(--font-cormorant), serif;
+  &.header-1 {
+    font-size: 70px;
+  }
+  &.header-2 {
+    font-size: 60px;
+  }
+  &.header-3 {
+    font-size: 45px;
+  }
+  &.header-4 {
+    font-size: 30px;
+  }
+  &.header-20 {
+    font-size: 70px;
+  }
+  &.body-1 {
+    font-size: 45px;
+  }
+  &.body-2 {
+    font-size: 30px;
+  }
+  &.body-3 {
+    font-size: 20px;
+  }
+  &.normal {
+    font-weight: 400;
+  }
+  &.bold {
+    font-weight: 700;
+  }
+}
