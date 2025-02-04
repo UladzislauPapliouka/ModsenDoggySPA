@@ -7,6 +7,7 @@ import {
 } from 'yup';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { Button } from '@components/Button';
 
 interface FormState {
   firstName: string;
@@ -116,13 +117,13 @@ export default function IndexPage() {
                   appointment will result in a cancellation fee of $300.00.
                 </span>
               </div>
-              <button
+              <Button
                 style={{
                   gridArea: 'submit',
                   justifySelf: 'center',
                 }}>
                 Submit
-              </button>
+              </Button>
             </div>
           </form>
           <div></div>

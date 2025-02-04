@@ -3,6 +3,7 @@ import { PageTitle } from '@components/PageTitle';
 import { useForm } from 'react-hook-form';
 import { object, ObjectSchema, string as yupString } from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { Button } from '@components/Button';
 interface FormState {
   firstName: string;
   lastName: string;
@@ -65,13 +66,13 @@ export default function IndexPage() {
           rows={16}
           placeholder={'Your massage goes here...'}
         />
-        <button
+        <Button
           style={{
             gridArea: 'submit',
             justifySelf: 'center',
           }}>
           Submit
-        </button>
+        </Button>
       </form>
     </div>
   );

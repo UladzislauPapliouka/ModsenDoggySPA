@@ -5,6 +5,7 @@ import pinterest from '../../../public/pinterest.svg';
 import twitter from '../../../public/twitter.svg';
 import snapchat from '../../../public/snapchat.svg';
 import Image from 'next/image';
+import { Button } from '@components/Button';
 
 const social = {
   instagram: {
@@ -45,7 +46,7 @@ export const Footer = () => {
           <span>Subscribe to our Newsletter</span>
           <div className={style.subscribeForm}>
             <input placeholder={'Email'} type="text" />
-            <button>Submit</button>
+            <Button>Submit</Button>
           </div>
           <div className={style.social}>
             <span>Connect With Us On Social Media</span>

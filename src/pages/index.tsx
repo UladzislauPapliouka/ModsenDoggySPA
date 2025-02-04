@@ -1,21 +1,16 @@
 import styles from './index.module.scss';
 import { PageTitle } from '@components/PageTitle';
+import { Button } from '@components/Button';
 export default function IndexPage() {
   return (
     <>
       <div className={styles.image}>
         <div>
           <span>Book your doggy spa day!</span>
-          <button
-            style={{
-              gridArea: 'submit',
-              justifySelf: 'center',
-            }}>
-            Submit
-          </button>
+          <Button>Submit</Button>
         </div>
         <img
-          src="https://s3-alpha-sig.figma.com/img/4918/aab5/58d36599ae6a3d32d30fe5507e16d3e9?Expires=1737936000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=J9RqwdTRlN8Z7Z8b4Xa7LmOQACzMr1jKm0mlI2qubNPBDEKzZGjrfr66Cr8cnsTBz4X81J43yk6qyNgxO0ymNAqe0ktJqenouoTovhPu0c5pL-jYZu526Z2eqTaNPvZy-nYYYufISQRMHavuNYgfKI2ZCFP1LsH~7SKmo0mMvo9pgGZ9DKqP4CVpeRf79oZPyDxEQfKDbboRCto6m7ENX5jR1Zy8AgrxUitZR86sXOvpEQm635XW0z7n8ADD0AfPRIYJDpczB77vy4c~0QEHNyn4yHYBCR~LVgWCOE9qyEXPiXlQ1F4~ZVLdFYGDduLmqABOHvHJa1f3Ux8x~okleA__"
+          src="https://s3-alpha-sig.figma.com/img/4918/aab5/58d36599ae6a3d32d30fe5507e16d3e9?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Hc2R-3x--GR1JfA00YpoJeRlm7fBbGiRuS8cNePai8XEsK4vNpHddLs8HDDMhCeDaTFlEpBUbVpyPiF342WArkN~dz-fjoSKnBjhEWG6N8Vwz2r8hVMUMWkA0A5DuBzqYVgtWgA0HYWjFHxfA0nqNv4dJKL0ur2igwFBfJrEFsjCjmYwS0b6GbibC2eqsnIeGLVu3r8zHx5vCciyMulCQ2BTeFmtp49iRrWP2pDghotsMjNYQP4HG~yEThG1~wZZrBpWGiR62ZcrIxAOHLx9v-jFa2GvAih6R7tgsOI76dXnAXzQ1CFPt-l8NGun1-mlUnedf~sk8yuGzNPchazLNA__"
           alt=""
         />
       </div>
@@ -56,13 +51,7 @@ export default function IndexPage() {
             <span>CA $325.00</span>
           </div>
         </div>
-        <button
-          style={{
-            gridArea: 'submit',
-            justifySelf: 'center',
-          }}>
-          See More Dog Collars
-        </button>
+        <Button>See More Dog Collars</Button>
       </div>
       <div className={styles.catalogSection}>
         <PageTitle title={'Animal Carry Ons'} />
@@ -101,13 +90,7 @@ export default function IndexPage() {
             <span>CA $325.00</span>
           </div>
         </div>
-        <button
-          style={{
-            gridArea: 'submit',
-            justifySelf: 'center',
-          }}>
-          See More Dog Collars
-        </button>
+        <Button>See More Dog Collars</Button>
       </div>
     </>
   );
