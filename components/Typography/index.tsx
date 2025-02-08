@@ -1,5 +1,7 @@
 import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 import styles from './index.module.scss';
+import cn from 'classnames';
+
 interface Props
   extends DetailedHTMLProps<
     ButtonHTMLAttributes<HTMLButtonElement>,
@@ -16,14 +18,21 @@ interface Props
     | 'body-3';
   weight?: 'normal' | 'bold';
 }
+
 export const Typography = ({
   variant = 'body-1',
   weight = 'normal',
+  className,
   ...props
 }: Props) => {
   return (
     <span
-      className={`${styles.component} ${styles[variant]} ${styles[weight]}`}
+      className={cn(
+        styles.component,
+        styles[variant],
+        styles[weight],
+        className
+      )}
       {...props}></span>
   );
 };

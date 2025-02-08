@@ -5,12 +5,8 @@
   align-items: center;
   gap: 34px;
   .title {
-    font-size: 70px;
-    font-weight: 700;
   }
   .subTitle {
-    font-size: 40px;
-    font-weight: 400;
-    font-family: var(--font-tangerine);
+    font-family: var(--font-tangerine), serif;
   }
 }

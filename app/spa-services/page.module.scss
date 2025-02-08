@@ -2,18 +2,19 @@
 .container {
   @extend .common-container;
 
-  > span {
+  .title > span {
     margin-bottom: 70px;
+  }
+  .title {
+    & + hr {
+      margin-bottom: 124px;
+    }
   }
 
   > hr {
     color: black;
     height: 1px;
     width: 50%;
-  }
-
-  > span + hr {
-    margin-bottom: 124px;
   }
 
   > hr:last-child {
