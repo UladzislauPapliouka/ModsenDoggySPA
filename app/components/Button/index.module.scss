@@ -1,0 +1,13 @@
+@import '../../styles/variables';
+.button {
+  background: $pink-kisses;
+  border: none;
+  height: fit-content;
+  padding: 10px 35px;
+  color: #fff;
+  font-family: var(--font-cormorant), serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 21px;
+  border-radius: 200px;
+}

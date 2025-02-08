@@ -1,0 +1,128 @@
+@import '../styles/variables';
+@import '../styles/common';
+.image {
+  position: relative;
+  height: fit-content;
+  img {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    object-position: center;
+    object-fit: cover;
+    top: 0;
+    z-index: -1;
+  }
+  div {
+    width: 100%;
+    position: absolute;
+    @extend .common-container;
+    align-items: flex-start;
+    padding: 97px 110px;
+    span {
+      display: block;
+      max-width: 478px;
+      color: white;
+      font-size: 70px;
+      font-weight: 700;
+    }
+    @media screen and (max-width: $mobile-width) {
+      padding: 16px 12px;
+      align-items: center;
+      span {
+        font-size: 50px;
+      }
+    }
+  }
+}
+.main {
+  padding: 70px;
+  > span:first-child {
+    font-size: 40px;
+    display: block;
+    font-weight: 700;
+    margin-bottom: 70px;
+  }
+  > div {
+    display: flex;
+    width: 100%;
+  }
+}
+@media screen and (max-width: $mobile-width) {
+  .main {
+    padding: 16px 12px;
+  }
+}
+
+.form {
+  width: 60%;
+  display: grid;
+  grid-template-areas:
+    'firstName lastName'
+    'email phoneNumber'
+    'message message'
+    'card card';
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    grid-template-areas:
+      'firstName'
+      'lastName'
+      'email'
+      'phoneNumber'
+      'message'
+      'card ';
+    .card {
+      width: 100% !important;
+      grid-template-areas:
+        'title'
+        'cardNumber'
+        'expiryDate'
+        'ccv'
+        'nameOnCard'
+        'paymentInfo'
+        'submit' !important;
+    }
+  }
+  grid-column-gap: 24px;
+  grid-row-gap: 40px;
+  .card {
+    grid-area: card;
+    display: grid;
+    grid-row-gap: 20px;
+    grid-column-gap: 24px;
+    margin: auto;
+    width: 60%;
+    grid-template-areas:
+      'title title'
+      'cardNumber cardNumber'
+      'expiryDate ccv'
+      'nameOnCard nameOnCard'
+      'paymentInfo paymentInfo'
+      'submit submit';
+    span:first-child {
+      font-size: 20px;
+      font-weight: 700;
+      text-align: center;
+      grid-area: title;
+    }
+  }
+  .paymentInfo {
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    grid-area: paymentInfo;
+  }
+  input,
+  textarea {
+    box-sizing: border-box;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px 24px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: var(--font-vormorant);
+    resize: none;
+  }
+}
