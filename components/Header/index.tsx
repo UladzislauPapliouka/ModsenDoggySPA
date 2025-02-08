@@ -5,7 +5,7 @@ import style from './index.module.scss';
 import { routes } from 'shared/routes';
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import logo from '../../../public/assets/logo.png';
+import logo from '@public/assets/logo.png';
 export const Header = () => {
   const currentPath = usePathname();
   const [isOpen, setIsOpen] = useState(false);

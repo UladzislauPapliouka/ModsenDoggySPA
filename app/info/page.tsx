@@ -2,7 +2,7 @@
 import { PageTitle } from '@components/PageTitle';
 import styles from './page.module.scss';
 import { CiSearch } from 'react-icons/ci';
-import { InfoCard } from '../../components/InfoCard';
+import { InfoCard } from '@components/InfoCard';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 interface MinimalBreedInfo {

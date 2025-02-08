@@ -1,10 +1,10 @@
 'use client';
 import style from './index.module.scss';
-import instagram from '../../../public/instagram.svg';
-import facebook from '../../../public/facebook.svg';
-import pinterest from '../../../public/pinterest.svg';
-import twitter from '../../../public/twitter.svg';
-import snapchat from '../../../public/snapchat.svg';
+import instagram from '@public/instagram.svg';
+import facebook from '@public/facebook.svg';
+import pinterest from '@public/pinterest.svg';
+import twitter from '@public/twitter.svg';
+import snapchat from '@public/snapchat.svg';
 import Image from 'next/image';
 import { Button } from '@components/Button';
 
