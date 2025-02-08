@@ -4,6 +4,8 @@
   justify-content: space-between;
   gap: 150px;
   align-items: center;
+  position: relative;
+  max-height: 500px;
   img {
     object-fit: cover;
     width: clamp(200px, 100%, 500px);
@@ -13,10 +15,19 @@
   }
 
   span {
+    display: -webkit-box; /* Включает флексбокс для обрезки */
+    -webkit-line-clamp: 14; /* Количество строк до обрезки */
+    -webkit-box-orient: vertical; /* Задает ориентацию контейнера */
+    overflow: hidden;
     font-size: 30px;
     font-weight: 400;
     text-align: center;
     width: 50%;
+    height: 100%;
+    hyphens: auto;
+    overflow-wrap: break-word; /* Для обеспечения переноса */
+    word-wrap: break-word;
+    text-overflow: ellipsis;
   }
   @media screen and (max-width: 700px) {
     flex-direction: column;

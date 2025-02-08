@@ -8,6 +8,12 @@ export default [
   reactEslintPlugin.configs.flat['jsx-runtime'],
   prettier,
   {
+    rules: {
+      '@typescript-eslint/no-unused-expressions': [
+        'error',
+        { allowShortCircuit: true },
+      ],
+    },
     ignores: [
       'node_modules/',
       '.next',
