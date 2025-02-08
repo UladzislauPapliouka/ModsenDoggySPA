@@ -16,12 +16,21 @@
     width: 100%;
     position: absolute;
     @extend .common-container;
+    align-items: flex-start;
+    padding: 97px 110px;
     span {
       display: block;
       max-width: 478px;
       color: white;
       font-size: 70px;
       font-weight: 700;
+    }
+    @media screen and (max-width: $mobile-width) {
+      padding: 16px 12px;
+      align-items: center;
+      span {
+        font-size: 50px;
+      }
     }
   }
 }

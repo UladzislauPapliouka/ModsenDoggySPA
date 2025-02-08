@@ -1,6 +1,8 @@
 import { InfoCard } from '@components/InfoCard';
 import styles from './index.module.scss';
 import { PageTitle } from '@components/PageTitle';
+import firstImage from '../../assets/about-us-1.png';
+import secondImage from '../../assets/about-us-2.png';
 export default function AboutUsPage() {
   return (
     <div className={styles.container}>
@@ -11,9 +13,7 @@ export default function AboutUsPage() {
 
       <>
         <InfoCard
-          image={
-            'https://s3-alpha-sig.figma.com/img/27f4/6f81/ee0d2b2390788cd09fc8e03419bbe486?Expires=1737936000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lCIsaWun032aR56z4z8cHmJBdQ1ALxM3KTcxhW9XdW~1BUftGvup-39DaGyHbc-lniv2E4M2XwVtRaHQBsewlEDw4BEPxakq8Fq1vyyDWDyMPKGGHCknkZ6h80zBb9iMfrEq7R493y5SXIlLPgWiXobFWf2A7rYz3NRlb35A3NzzII0lLRNL1XP7c4FNoedwU2Qa0o7SdeiNWUzpLWsppXFBdpFbb9JCPMa~wwjZV-htYQidbjan3JZostg8vQnz3m22bR5XMAVQhoXsNVzoMQQFK7yRVr5t4uY4EziB2RJ8sYV5SlXNbuzKMRbQvIc-sHFI-CwKgV5D47U6Ndy6Ng__'
-          }
+          image={firstImage.src}
           text={
             'Here at Luxe Animal Spa we aim to provide you with the best service\n' +
             '          possible for both you and your pet! We pride ourselves in offering a\n' +
@@ -23,9 +23,7 @@ export default function AboutUsPage() {
           }
         />
         <InfoCard
-          image={
-            'https://s3-alpha-sig.figma.com/img/27f4/6f81/ee0d2b2390788cd09fc8e03419bbe486?Expires=1737936000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lCIsaWun032aR56z4z8cHmJBdQ1ALxM3KTcxhW9XdW~1BUftGvup-39DaGyHbc-lniv2E4M2XwVtRaHQBsewlEDw4BEPxakq8Fq1vyyDWDyMPKGGHCknkZ6h80zBb9iMfrEq7R493y5SXIlLPgWiXobFWf2A7rYz3NRlb35A3NzzII0lLRNL1XP7c4FNoedwU2Qa0o7SdeiNWUzpLWsppXFBdpFbb9JCPMa~wwjZV-htYQidbjan3JZostg8vQnz3m22bR5XMAVQhoXsNVzoMQQFK7yRVr5t4uY4EziB2RJ8sYV5SlXNbuzKMRbQvIc-sHFI-CwKgV5D47U6Ndy6Ng__'
-          }
+          image={secondImage.src}
           reversed
           text={
             'Here at Luxe Animal Spa we aim to provide you with the best service\n' +

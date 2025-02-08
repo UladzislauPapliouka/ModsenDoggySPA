@@ -8,6 +8,7 @@ import {
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Button } from '@components/Button';
+import image from '../../assets/book-appointment.png';
 
 interface FormState {
   firstName: string;
@@ -46,10 +47,7 @@ export default function IndexPage() {
         <div>
           <span>Book An Appointment With Our Groom Specialist Today!</span>
         </div>
-        <img
-          src="https://s3-alpha-sig.figma.com/img/65ea/5430/c7c524ac1e1697207f2c17d437a3418b?Expires=1737936000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bfmEUMIpyUbk70j1b5wQu13MgSyZ9JvG5B-THAPRXr~0-RjZmC~pPnL0VhxTugT9WbR6J9f5T0BS-SsxgYJFuJYK382SupwTvpyZMsFTEoHHJruAyO0NhceDQVLVyCGQX~LkkTz~NWfDJnZ5CZPNMUUFYO4Jeu~s2zJQuh51C0u540A~RtFVETQId9XsDPGwMiI-~GFKAlVuN~v95Yo2ctCLDm6QgwtbR4mhHtj0hYCi0CpmWrrEJCL0FsBgSIH~h1kJDOXcUMo3gVa-pDIFxTUb2jwHfnMw7qRViUgKG-IoQ1Y7LvzMKCBmopJ6d18iztNFk2-utBw~097fzc44VQ__"
-          alt=""
-        />
+        <img src={image.src} alt="" />
       </div>
       <div className={styles.main}>
         <span>Enter your information here</span>
