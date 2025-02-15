@@ -1,0 +1,23 @@
+@import 'styles/variables';
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 40px;
+  .monthName {
+    font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
+  }
+  .chevrons {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    &:hover {
+      background: rgba($pink-kisses, 0.5);
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import 'styles/variables';
+.cell {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  font:
+    14px var(--font-poppins),
+    sans-serif;
+  color: $char-coal;
+  &:hover {
+    background: rgba($pink-kisses, 0.5);
+    cursor: pointer;
+  }
+  &.active {
+    background: $pink-kisses;
+  }
+  &.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  &.dayName {
+    color: $pink-kisses;
+    pointer-events: none;
+  }
+}

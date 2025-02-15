@@ -1,5 +1,5 @@
 import type { Preview } from '@storybook/react';
-import { Cormorant, Tangerine } from 'next/font/google';
+import { Cormorant, Tangerine, Poppins } from 'next/font/google';
 export const cormorant = Cormorant({
   subsets: ['cyrillic', 'latin'],
   variable: '--font-cormorant',
@@ -10,12 +10,18 @@ export const tangerine = Tangerine({
   variable: '--font-tangerine',
 });
 
+export const poppins = Poppins({
+  weight: ['700', '500'],
+  subsets: ['latin'],
+  variable: '--font-poppins',
+});
+
 const preview: Preview = {
   decorators: [
     Story => (
       <div
         className={`${cormorant.variable}
-              ${tangerine.variable}`}>
+              ${tangerine.variable} ${poppins.variable}`}>
         <Story />
       </div>
     ),
